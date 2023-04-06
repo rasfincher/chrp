@@ -24,9 +24,8 @@ const Home: NextPage = () => {
           {!!isSignedIn && <SignOutButton />}
         </div>
         <div>
-          {data?.map((post) => (
-            <div key={post.id}>{post.content}</div>
-          ))}
+          {!!isSignedIn &&
+            data?.map((post) => <div key={post.id}>{post.content}</div>)}
         </div>
       </main>
     </>
